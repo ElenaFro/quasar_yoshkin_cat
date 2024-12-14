@@ -1,8 +1,9 @@
 <template>
   <q-page>
-    <h1>Маршруты</h1>
-    <p>Информация о маршрутах</p>
-    <canvas ref="mapCanvas" width="800" height="600"></canvas>
+    <h1>Маршрут исторический</h1>
+    <p>Информация о маршруте</p>
+    <p>Выберите интересное место на карте</p>
+    <canvas ref="mapCanvas" width="1200" height="900"></canvas>
   </q-page>
 </template>
 

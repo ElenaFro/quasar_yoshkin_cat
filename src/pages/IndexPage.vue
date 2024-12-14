@@ -2,9 +2,9 @@
   <div class="q-pa-md">
     <!-- <div class="q-col-gutter-md row items-start">
       <div class="col-6"> -->
-        <q-img src="https://cdn.quasar.dev/img/parallax2.jpg">
+        <q-img src='src/assets/freepik__expand__3287.png'>
           <div class="absolute-full text-subtitle2 flex flex-center">
-            Котик
+            Путешествуй с Котиком Йошкой
           </div>
         </q-img>
       <!-- </div>

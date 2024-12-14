@@ -17,7 +17,7 @@
         </q-toolbar-title>
 
         <q-btn flat label="О нас" @click="goToAbout" />
-        <q-btn flat label="Маршруты" @click="goToRoutes" />
+        <q-btn flat label="Маршрут исторический" @click="goToRoutes" />
         <q-btn flat label="Отзывы" @click="goToReviews" />
       </q-toolbar>
     </q-header>

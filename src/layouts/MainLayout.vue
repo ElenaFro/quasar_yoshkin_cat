@@ -12,10 +12,13 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 40px;"/>
+          Йошкин кот
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn flat label="О нас" @click="goToAbout" />
+        <q-btn flat label="Маршруты" @click="goToRoutes" />
+        <q-btn flat label="Отзывы" @click="goToReviews" />
       </q-toolbar>
     </q-header>
 
@@ -28,7 +31,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Меню
         </q-item-label>
 
         <EssentialLink
@@ -43,6 +46,7 @@
       <router-view />
     </q-page-container>
   </q-layout>
+  
 </template>
 
 <script setup>
@@ -51,46 +55,46 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Карта',
+    // caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: ''
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Маршруты',
+    // caption: 'github.com/quasarframework',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: ''
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
+    title: 'Достопримечательности',
+    // caption: 'chat.quasar.dev',
     icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: ''
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
+    title: 'Тесты',
+    // caption: 'forum.quasar.dev',
     icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: ''
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
+    title: 'О нас',
+    // caption: '@quasarframework',
     icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    link: ''
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
+    title: 'Контакты',
+    // caption: '@QuasarFramework',
     icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    link: ''
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Отзывы',
+    // caption: 'Community Quasar projects',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: ''
   }
 ]
 
@@ -99,4 +103,24 @@ const leftDrawerOpen = ref(false)
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
+
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const goToHome = () => {
+  router.push('/');
+};
+
+const goToAbout = () => {
+  router.push('/about');
+};
+
+const goToRoutes = () => {
+  router.push('/routes');
+};
+
+const goToReviews = () => {
+  router.push('/reviews');
+};
 </script>

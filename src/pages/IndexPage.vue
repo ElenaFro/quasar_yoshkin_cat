@@ -1,11 +1,15 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <div class="q-pa-md">
+    <!-- <div class="q-col-gutter-md row items-start">
+      <div class="col-6"> -->
+        <q-img src="https://cdn.quasar.dev/img/parallax2.jpg">
+          <div class="absolute-full text-subtitle2 flex flex-center">
+            Котик
+          </div>
+        </q-img>
+      <!-- </div>
+    </div> -->
+  </div>
 </template>
 
 <script setup>

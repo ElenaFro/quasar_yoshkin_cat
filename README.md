@@ -1,4 +1,4 @@
-# Quasar App (quasqr-yoshcincat)
+# Quasar App (quasar-yoshkincat)
 
 A Quasar Project
 

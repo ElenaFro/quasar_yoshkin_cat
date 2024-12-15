@@ -1,9 +1,17 @@
 <template>
   <q-page>
-    <h1>Маршрут исторический</h1>
-    <p>Информация о маршруте</p>
-    <p>Выберите интересное место на карте</p>
-    <canvas ref="mapCanvas" width="1200" height="900"></canvas>
+    <div class="q-pa-md q-gutter-sm">
+      <q-breadcrumbs>
+        <q-breadcrumbs-el label="Главная"  to="/"/>
+        <q-breadcrumbs-el label="Маршрут исторический" />
+      </q-breadcrumbs>
+    </div>
+    <div class='q-ma-lg'>
+      <h1>Маршрут исторический</h1>
+      <p>Информация о маршруте</p>
+      <p>Выберите интересное место на карте</p>
+    </div>  
+    <canvas class='q-ma-lg' ref="mapCanvas" width="1200" height="900"></canvas>
   </q-page>
 </template>
 

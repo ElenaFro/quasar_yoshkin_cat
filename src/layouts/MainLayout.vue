@@ -16,9 +16,23 @@
           Йошкин кот
         </q-toolbar-title>
 
-        <q-btn  flat label="О нас" @click="goToAbout" />
-        <q-btn flat label="Маршрут исторический" @click="goToRoutes" />
-        <q-btn :class="{ ' text-black': isReviewsActive }" flat label="Отзывы" @click="goToReviews" />
+        <q-tabs>
+          <q-route-tab
+            label="О нас"
+            to="/about"
+            exact
+          />
+          <q-route-tab
+            label="Маршрут исторический"
+            to="/routes"
+            exact
+          />
+          <q-route-tab
+            label="Отзывы"
+            to="/reviews"
+            exact
+          />
+        </q-tabs>
 
       </q-toolbar>
     </q-header>
@@ -42,19 +56,16 @@
         />
       </q-list>
     </q-drawer>
-
+    
     <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
-  
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
-
-const isReviewsActive = ref(false);
 
 const linksList = [
   {
@@ -112,22 +123,9 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const goToHome = () => {
-  isReviewsActive.value = false;
   router.push('/');
 };
 
-const goToAbout = () => {
-  isReviewsActive.value = false;
-  router.push('/about');
-};
-
-const goToRoutes = () => {
-  isReviewsActive.value = false;
-  router.push('/routes');
-};
-
-const goToReviews = () => {
-  isReviewsActive.value = true;
-  router.push('/reviews');
-};
 </script>
+
+

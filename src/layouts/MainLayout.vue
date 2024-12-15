@@ -16,9 +16,10 @@
           Йошкин кот
         </q-toolbar-title>
 
-        <q-btn flat label="О нас" @click="goToAbout" />
+        <q-btn  flat label="О нас" @click="goToAbout" />
         <q-btn flat label="Маршрут исторический" @click="goToRoutes" />
-        <q-btn flat label="Отзывы" @click="goToReviews" />
+        <q-btn :class="{ ' text-black': isReviewsActive }" flat label="Отзывы" @click="goToReviews" />
+
       </q-toolbar>
     </q-header>
 
@@ -52,6 +53,8 @@
 <script setup>
 import { ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
+
+const isReviewsActive = ref(false);
 
 const linksList = [
   {
@@ -109,18 +112,22 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const goToHome = () => {
+  isReviewsActive.value = false;
   router.push('/');
 };
 
 const goToAbout = () => {
+  isReviewsActive.value = false;
   router.push('/about');
 };
 
 const goToRoutes = () => {
+  isReviewsActive.value = false;
   router.push('/routes');
 };
 
 const goToReviews = () => {
+  isReviewsActive.value = true;
   router.push('/reviews');
 };
 </script>

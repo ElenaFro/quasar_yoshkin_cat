@@ -4,9 +4,9 @@
       <div style="font-size: 30vh">
         404
       </div>
-
+      <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 80px;"/>
       <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
+        Упс. Здесь ничего нет...
       </div>
 
       <q-btn
@@ -15,7 +15,7 @@
         text-color="blue"
         unelevated
         to="/"
-        label="Go Home"
+        label="Вернуться на главную"
         no-caps
       />
     </div>

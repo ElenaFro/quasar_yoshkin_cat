@@ -2,21 +2,21 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
+        <!-- <q-btn v-else
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
-        />
+        /> -->
 
         <q-toolbar-title>
           <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 40px;"/>
           Йошкин кот
         </q-toolbar-title>
 
-        <q-tabs>
+        <q-tabs v-if="$q.screen.gt.sm">
           <q-route-tab
             label="О нас"
             to="/about"
@@ -33,14 +33,21 @@
             exact
           />
         </q-tabs>
-
+        <q-btn v-else
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
-      show-if-above
       bordered
+      v-if="isWithinRange"
     >
       <q-list>
         <q-item-label
@@ -49,11 +56,23 @@
           Меню
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-tabs vertical>
+          <q-route-tab 
+            label="О нас"
+            to="/about"
+            exact
+          />
+          <q-route-tab
+            label="Маршрут исторический"
+            to="/routes"
+            exact
+          />
+          <q-route-tab
+            label="Отзывы"
+            to="/reviews"
+            exact
+          />
+        </q-tabs>
       </q-list>
     </q-drawer>
     
@@ -64,55 +83,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Карта',
-    // caption: 'quasar.dev',
-    icon: 'school',
-    link: ''
-  },
-  {
-    title: 'Маршруты',
-    // caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: ''
-  },
-  {
-    title: 'Достопримечательности',
-    // caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: ''
-  },
-  {
-    title: 'Тесты',
-    // caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: ''
-  },
-  {
-    title: 'О нас',
-    // caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: ''
-  },
-  {
-    title: 'Контакты',
-    // caption: '@QuasarFramework',
-    icon: 'public',
-    link: ''
-  },
-  {
-    title: 'Отзывы',
-    // caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: ''
-  }
-]
+import { ref, computed } from 'vue'; 
 
 const leftDrawerOpen = ref(false)
+
+// Computed property to check if the screen width is within the desired range
+const isWithinRange = computed(() => {
+  const width = window.innerWidth;
+  return width >= 300 && width < 1024;
+});
 
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value

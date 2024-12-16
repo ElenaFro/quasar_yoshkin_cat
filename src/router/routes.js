@@ -8,9 +8,9 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('src/pages/YoshkinCat.vue') },
-      { path: 'about', component: About },
-      { path: 'routes', component: Routes },
-      { path: 'reviews', component: Reviews }
+      { path: '/about', component: () => import('src/pages/About.vue') },
+      { path: '/routes', component: () => import('src/pages/Routes.vue') },
+      { path: '/reviews', component: () => import('src/pages/Reviews.vue') }
     ]
   },
 

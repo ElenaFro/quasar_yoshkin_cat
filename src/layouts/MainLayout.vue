@@ -51,28 +51,19 @@
           />
         </q-item>
 
-        <q-tabs vertical>
-          <q-route-tab
-            label="Главная"
-            to="/"
-            exact
-          />
-          <q-route-tab 
-            label="О нас"
-            to="/about"
-            exact
-          />
-          <q-route-tab
-            label="Маршрут исторический"
-            to="/routes"
-            exact
-          />
-          <q-route-tab
-            label="Отзывы"
-            to="/reviews"
-            exact
-          />
-        </q-tabs>
+        <q-item to="/" exact clickable v-ripple >
+          <q-item-section avatar>Главная</q-item-section>
+        </q-item>
+        <q-item to="/about" exact clickable v-ripple >
+          <q-item-section avatar>О нас</q-item-section>
+        </q-item>
+        <q-item to="/routes" exact clickable v-ripple >
+          <q-item-section avatar>Маршрут исторический</q-item-section>
+        </q-item>
+        <q-item to="/reviews" exact clickable v-ripple >
+          <q-item-section avatar>Отзывы</q-item-section>
+        </q-item>
+        
       </q-list>
     </q-drawer>
     

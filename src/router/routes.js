@@ -1,13 +1,13 @@
-import About from 'pages/About.vue';
-import Routes from 'pages/Routes.vue';
-import Reviews from 'pages/Reviews.vue';
+import About from 'src/pages/About.vue';
+import Routes from "src/pages/Routes.vue";
+import Reviews from 'src/pages/Reviews.vue';
 
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: '', component: () => import('src/pages/YoshkinCat.vue') },
       { path: 'about', component: About },
       { path: 'routes', component: Routes },
       { path: 'reviews', component: Reviews }

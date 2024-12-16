@@ -38,13 +38,18 @@
     <q-drawer
       v-model="leftDrawerOpen"
       bordered
+      side="right"
     >
       <q-list>
-        <q-item-label
-          header
-        >
-          Меню
-        </q-item-label>
+        <q-item>
+          <q-btn
+            flat
+            icon="close"
+            @click="leftDrawerOpen = false" 
+            aria-label="Close"
+            class="q-ml-auto q-pr-none" 
+          />
+        </q-item>
 
         <q-tabs vertical>
           <q-route-tab

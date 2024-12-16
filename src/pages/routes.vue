@@ -71,7 +71,7 @@ onMounted(() => {
 
 <style scoped>
 canvas {
-  background-image: url('src/assets/freepik__expand__3287.png'); /* Убедитесь, что путь к изображению правильный */
+  background-image: url('src/assets/freepik__expand__3287.png'); 
   background-size: cover;
   background-position: center; 
 }

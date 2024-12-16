@@ -2,15 +2,6 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <!-- <q-btn v-else
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        /> -->
-
         <q-toolbar-title>
           <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 40px;"/>
           Йошкин кот
@@ -47,7 +38,6 @@
     <q-drawer
       v-model="leftDrawerOpen"
       bordered
-      v-if="isWithinRange"
     >
       <q-list>
         <q-item-label
@@ -57,6 +47,11 @@
         </q-item-label>
 
         <q-tabs vertical>
+          <q-route-tab
+            label="Главная"
+            to="/"
+            exact
+          />
           <q-route-tab 
             label="О нас"
             to="/about"
@@ -83,15 +78,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'; 
+import { ref } from 'vue'; 
 
 const leftDrawerOpen = ref(false)
-
-// Computed property to check if the screen width is within the desired range
-const isWithinRange = computed(() => {
-  const width = window.innerWidth;
-  return width >= 300 && width < 1024;
-});
 
 function toggleLeftDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value

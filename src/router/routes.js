@@ -1,6 +1,3 @@
-import About from 'src/pages/About.vue';
-import Routes from "src/pages/Routes.vue";
-import Reviews from 'src/pages/Reviews.vue';
 
 const routes = [
   {
@@ -14,8 +11,6 @@ const routes = [
     ]
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')

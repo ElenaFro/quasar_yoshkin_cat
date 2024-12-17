@@ -3,27 +3,22 @@
     <q-header class="transparent-header ">
       <q-toolbar>
         <q-toolbar-title>
-          <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 40px;"/>
+          <img src='src/assets/котик.svg' alt="Logo" @click="goToHome" style="height: 40px;"/>
           Йошкин кот
         </q-toolbar-title>
 
-        <q-tabs v-if="$q.screen.gt.sm">
-          <q-route-tab
-            label="О нас"
-            to="/about"
-            exact
-          />
-          <q-route-tab
-            label="Маршрут исторический"
-            to="/routes"
-            exact
-          />
-          <q-route-tab
-            label="Отзывы"
-            to="/reviews"
-            exact
-          />
+        <q-tabs v-if="$q.screen.gt.sm" class="absolute-top buttons">
+          <q-btn outline rounded color="primary" to="/about" exact>
+            <div class="dark">О нас</div>
+          </q-btn>
+          <q-btn outline rounded color="primary" to="/routes" exact class="q-ml-lg q-mr-lg">
+            <div class="dark">Исторический</div>
+          </q-btn>
+          <q-btn outline rounded color="primary" to="/reviews" exact>
+            <div class="dark">Современный</div>
+          </q-btn>
         </q-tabs>
+        
         <q-btn v-else
           flat
           dense
@@ -67,7 +62,7 @@
       </q-list>
     </q-drawer>
     
-    <q-page-container>
+    <q-page-container class="no-padding">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -91,10 +86,15 @@ const goToHome = () => {
 };
 
 </script>
+
 <style scoped>
 .transparent-header {
+  top: 50px;
   background-color: transparent !important; /* Делаем фон прозрачным */
-  color: #2F2F2F;
+  color: #2F2F2F !important;
+  z-index: 1000; /* Добавлено для обеспечения правильного наложения */
+}
+.dark {
+  color: #2F2F2F !important;
 }
 </style>
-

@@ -1,7 +1,7 @@
 <template>
   <q-page>
-        <div>
-          <q-img class="fixed-top" src='src/assets/image_cat_first.png'>
+        <div class="absolute-top">
+          <q-img class="" src='src/assets/image_cat_first.png'>
             <div class="absolute-full text-subtitle2 flex flex-left items-center fix">
               <div>
                 <h1>Экскурсии с Йошкиным котом по Красному городу</h1>
@@ -38,5 +38,7 @@ h1 {
   width: 59vw;
   height: auto;
 }
-
+.absolute-top{
+  top: 0px;
+}
 </style>

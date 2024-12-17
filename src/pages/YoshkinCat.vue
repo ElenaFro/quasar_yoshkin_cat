@@ -11,7 +11,26 @@
             </div>
           </q-img>
     </div>
+
   </q-page>
+  <!-- <q-btn-group>
+      <q-btn outline rounded class="q-mr-md" label="Интерактивность" color="primary" />
+      <q-btn outline rounded class="q-mr-md" label="Интерактивность" color="primary" />
+      <q-btn outline rounded class="q-mr-md" label="Инклюзивность" color="primary" />
+      <q-btn outline rounded class="q-mr-md" label="Образованность" color="primary" />
+    </q-btn-group> -->
+    <div class="marquee">
+    <div class="marquee-content">
+      <img src="src/assets/image1_btn.png" alt="Image 1" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 2" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 3" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 4" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 1" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 2" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 3" class="marquee-image" />
+      <img src="src/assets/image1_btn.png" alt="Image 4" class="marquee-image" />
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -37,5 +56,32 @@ h1 {
 .dim {
   width: 59vw;
   height: auto;
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%; /* Ширина области бегущей строки */
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 40s linear infinite; /* Анимация */
+}
+.marquee-inner {
+  display: inline-block; /* Обертываем изображения в дополнительный div */
+}
+.marquee-image {
+  height: 100px;
+  margin-right: 16px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Начальная позиция (слева) */
+  }
+  100% {
+    transform: translateX(-50%); /* Конечная позиция  */
+  }
 }
 </style>

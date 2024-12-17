@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="lhh Lpr lFf">
+    <q-header class="transparent-header ">
       <q-toolbar>
         <q-toolbar-title>
           <img src='src/assets/котик.svg' alt="Logo" @click="goToHome"   style="height: 40px;"/>
@@ -91,5 +91,10 @@ const goToHome = () => {
 };
 
 </script>
-
+<style scoped>
+.transparent-header {
+  background-color: transparent !important; /* Делаем фон прозрачным */
+  color: #2F2F2F;
+}
+</style>
 

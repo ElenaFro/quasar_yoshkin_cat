@@ -1,8 +1,9 @@
-vue
 <template>
   <q-page>
-    <h1>Отзывы</h1>
-    <p>отзывы</p>
+    <!-- <div>
+    <h1>Современный маршрут</h1>
+    <p>1</p>
+  </div> -->
   </q-page>
 </template>
 

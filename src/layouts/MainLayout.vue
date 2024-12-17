@@ -53,10 +53,10 @@
           <q-item-section avatar>О нас</q-item-section>
         </q-item>
         <q-item to="/routes" exact clickable v-ripple >
-          <q-item-section avatar>Маршрут исторический</q-item-section>
+          <q-item-section avatar>Исторический</q-item-section>
         </q-item>
         <q-item to="/reviews" exact clickable v-ripple >
-          <q-item-section avatar>Отзывы</q-item-section>
+          <q-item-section avatar>Современный</q-item-section>
         </q-item>
         
       </q-list>
@@ -89,7 +89,7 @@ const goToHome = () => {
 
 <style scoped>
 .transparent-header {
-  top: 50px;
+  padding-top: 50px;
   background-color: transparent !important; /* Делаем фон прозрачным */
   color: #2F2F2F !important;
   z-index: 1000; /* Добавлено для обеспечения правильного наложения */

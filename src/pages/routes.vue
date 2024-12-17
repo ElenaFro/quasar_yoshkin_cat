@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="q-pa-md q-gutter-sm">
+    <div class="q-pa-md q-gutter-sm padding-top-100">
       <q-breadcrumbs>
         <q-breadcrumbs-el label="Главная"  to="/"/>
         <q-breadcrumbs-el label="Маршрут исторический" />
@@ -74,5 +74,8 @@ canvas {
   background-image: url('src/assets/freepik__expand__3287.png'); 
   background-size: cover;
   background-position: center; 
+}
+.padding-top-100 {
+  padding-top: 100px;
 }
 </style>

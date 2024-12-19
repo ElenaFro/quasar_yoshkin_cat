@@ -34,3 +34,14 @@ git push -u origin main
 git add . 
 git commit -m "комментарии" 
 git push origin имя ветки
+
+Создать новую ветку можно с помощью команды 
+git branch <название ветки>
+
+Переключиться на ветку main:
+  git checkout main 
+
+Обновите ветку main, чтобы учесть последние изменения из удаленного репозитория: 
+ git pull origin main 
+
+Переключиться обратно на вашу ветку:  git checkout ваша_ветка 

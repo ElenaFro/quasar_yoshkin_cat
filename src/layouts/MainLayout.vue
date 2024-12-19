@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lhh Lpr lFf">
+  <q-layout view="lhh Lpr lff">
     <q-header class="transparent-header q-pl-150 q-pr-150">
       <q-toolbar class="q-pl-none">
         <q-toolbar-title >
@@ -14,6 +14,7 @@
             <div class="dark text-capitalize">О нас</div>
           </q-btn>
           <q-btn outline rounded color="primary" to="/routes" exact class="q-mlr-40 border-2-red">
+          <!-- <q-btn outline rounded color="primary" to="/routes" exact  @click="triggerInfo" class="q-mlr-40 border-2-red"> -->
             <div class="dark text-capitalize">Исторический</div>
           </q-btn>
           <q-btn outline rounded color="primary" class="border-2-red" to="/reviews" exact>
@@ -64,15 +65,26 @@
       </q-list>
     </q-drawer>
     
-    <q-page-container class="no-padding">
+    <q-page-container class="no-padding q-pb-200">
       <router-view />
     </q-page-container>
+
+    <q-footer class="bg-grey-8 text-white">
+      <q-toolbar>
+        <q-toolbar-title>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+          </q-avatar>
+          <div>Title</div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'; 
-
+// бургер
 const leftDrawerOpen = ref(false)
 
 function toggleLeftDrawer () {
@@ -82,10 +94,21 @@ function toggleLeftDrawer () {
 
 import { useRouter } from 'vue-router';
 
+// переход на главную
 const router = useRouter();
 const goToHome = () => {
   router.push('/');
 };
+
+// уведомление
+// import { useQuasar } from 'quasar'
+// const $q = useQuasar()
+// const triggerInfo = () => {
+//   $q.notify({
+//     type: 'info',
+//     message: 'Это уведомление типа "информация".'
+//   })
+// }
 
 </script>
 

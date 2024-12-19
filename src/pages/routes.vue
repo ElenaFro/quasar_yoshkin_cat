@@ -12,6 +12,7 @@
       <p>Выберите интересное место на карте</p>
     </div>  
     <canvas class='q-ma-lg' ref="mapCanvas" width="1920" height="867"></canvas>
+    
   </q-page>
 </template>
 

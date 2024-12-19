@@ -1,17 +1,17 @@
 <template>
   <q-page>
-    <div class="q-pa-md q-gutter-sm padding-top-100">
+    <div class="padding-top-sto q-pl-150">
       <q-breadcrumbs>
         <q-breadcrumbs-el label="Главная"  to="/"/>
         <q-breadcrumbs-el label="Маршрут исторический" />
       </q-breadcrumbs>
     </div>
-    <div class='q-ma-lg'>
-      <h1>Маршрут исторический</h1>
+    <div class='q-mt-lg q-pl-150 '>
+      <h3>Маршрут исторический</h3>
       <p>Информация о маршруте</p>
       <p>Выберите интересное место на карте</p>
     </div>  
-    <canvas class='q-ma-lg' ref="mapCanvas" width="1200" height="900"></canvas>
+    <canvas class='q-ma-lg' ref="mapCanvas" width="1920" height="867"></canvas>
   </q-page>
 </template>
 
@@ -22,17 +22,17 @@ const canvas = ref(null);
 const ctx = ref(null);
 
 // Начальные координаты кота
-let catX = 50;
-let catY = 100;
+let catX = 390;
+let catY = 260;
 
 // Создаем объект изображения для котика
-import catImageSrc from 'src/assets/котик.svg'; // Импортируем изображение
+import catImageSrc from 'src/assets/котик.png'; // Импортируем изображение
 const catImage = new Image();
 catImage.src = catImageSrc; // Устанавливаем путь к изображению
 
 // Функция для рисования кота
 function drawCat() {
-  ctx.value.drawImage(catImage, catX - 35, catY - 60, 60, 60);
+  ctx.value.drawImage(catImage, catX - 35, catY - 60, 100, 100);
 }
 
 // Функция для обновления карты
@@ -71,11 +71,11 @@ onMounted(() => {
 
 <style scoped>
 canvas {
-  background-image: url('src/assets/freepik__expand__3287.png'); 
+  background-image: url('src/assets/Маршрут1.png'); 
   background-size: cover;
   background-position: center; 
 }
-.padding-top-100 {
-  padding-top: 100px;
+.padding-top-sto {
+  padding-top: 150px;
 }
 </style>

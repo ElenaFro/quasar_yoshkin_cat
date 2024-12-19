@@ -1,7 +1,7 @@
 <template>
   <q-page>
       <q-img src='src/assets/bg-yct.png'>
-        <div class="absolute-full text-subtitle2 flex flex-left items-center fix">
+        <div class="absolute-full text-subtitle2 flex flex-left items-center q-pl-none fix">
           <div class="q-pl-150">
             <h1>Экскурсии с Йошкиным котом по Красному городу</h1>
             <q-img src='src/assets/заголовок.svg' class="dim"></q-img>
@@ -51,13 +51,13 @@ h1 {
   display: none;
 }
 .text-body1 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   max-width:59vw ;
   width: 1022px;
   color: #101011;
   font-family: Montserrat Alternates;
-  line-height: 50px;
+  line-height: 42px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;

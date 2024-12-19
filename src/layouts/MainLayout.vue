@@ -1,10 +1,12 @@
 <template>
   <q-layout view="lhh Lpr lFf">
     <q-header class="transparent-header q-pl-150 q-pr-150">
-      <q-toolbar>
-        <q-toolbar-title>
-          <img src='src/assets/котик.svg' alt="Logo" @click="goToHome" style="height: 40px;"/>
+      <q-toolbar class="q-pl-none">
+        <q-toolbar-title >
+          <q-item class="q-pl-none" to="/" exact clickable v-ripple style="width: 240px;" >
+          <img src='src/assets/котик.svg' alt="Logo" style="height: 40px;"/>
           Йошкин кот
+          </q-item>
         </q-toolbar-title>
 
         <q-tabs v-if="$q.screen.gt.sm" class="absolute-top buttons">

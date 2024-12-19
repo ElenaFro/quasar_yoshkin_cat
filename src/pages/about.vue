@@ -1,16 +1,15 @@
 vue
 <template>
   <q-page>
-        <div class="">
-          <q-img src='src/assets/bg-cat.png'>
-            <div class="absolute-full text-subtitle2 text-dark flex flex-left q-mt-xl fix">
-              <div>
-                <h2>О нас</h2>
-                <p class="text-body1"> Информация о проекте</p>
-              </div>
-            </div>
-          </q-img>
-    </div>
+    <q-img src='src/assets/bg-yct.png'>
+      <div class="absolute-full text-subtitle2 text-dark flex flex-left q-mt-xl q-pl-none fix">
+        <div class="q-pl-150">
+
+          <h2>О нас</h2>
+          <p class="text-body1"> Информация о проекте</p>
+        </div>
+      </div>
+    </q-img>
   </q-page>
 </template>
 

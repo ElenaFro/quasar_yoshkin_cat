@@ -2,7 +2,7 @@
   <q-page>
       <q-img src='src/assets/bg-yct.png'>
         <div class="absolute-full text-subtitle2 flex flex-left items-center fix">
-          <div>
+          <div class="q-pl-150">
             <h1>Экскурсии с Йошкиным котом по Красному городу</h1>
             <q-img src='src/assets/заголовок.svg' class="dim"></q-img>
             <p class="text-body1"> История и современность: инклюзивное путешествие по Йошкар-Оле.</p>
@@ -61,13 +61,13 @@ h1 {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .fix {
   background-color: transparent !important;
 }   
 .dim {
-  width: 53vw;
+  width: 50vw;
   height: auto;
 }
 .marquee {

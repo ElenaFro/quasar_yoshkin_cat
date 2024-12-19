@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lhh Lpr lFf">
-    <q-header class="transparent-header ">
+    <q-header class="transparent-header q-pl-150 q-pr-150">
       <q-toolbar>
         <q-toolbar-title>
           <img src='src/assets/котик.svg' alt="Logo" @click="goToHome" style="height: 40px;"/>
@@ -8,14 +8,14 @@
         </q-toolbar-title>
 
         <q-tabs v-if="$q.screen.gt.sm" class="absolute-top buttons">
-          <q-btn outline rounded color="primary" to="/about" exact>
-            <div class="dark">О нас</div>
+          <q-btn outline rounded color="primary" class="border-2-red" to="/about" exact>
+            <div class="dark text-capitalize">О нас</div>
           </q-btn>
-          <q-btn outline rounded color="primary" to="/routes" exact class="q-ml-lg q-mr-lg">
-            <div class="dark">Исторический</div>
+          <q-btn outline rounded color="primary" to="/routes" exact class="q-mlr-40 border-2-red">
+            <div class="dark text-capitalize">Исторический</div>
           </q-btn>
-          <q-btn outline rounded color="primary" to="/reviews" exact>
-            <div class="dark">Современный</div>
+          <q-btn outline rounded color="primary" class="border-2-red" to="/reviews" exact>
+            <div class="dark text-capitalize">Современный</div>
           </q-btn>
         </q-tabs>
         
@@ -96,5 +96,10 @@ const goToHome = () => {
 }
 .dark {
   color: #2F2F2F !important;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16.8px;
+  letter-spacing: -0.07px;
+  text-align: center;
 }
 </style>

@@ -1,17 +1,18 @@
 // app global css in SCSS form
 
-// Шрифты
+// Шрифты и фон
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 #q-app {  
   font-family: "Montserrat Alternates", sans-serif;
-  color: #101011;
+  color: #0F0E0E;
+  background-color: #FFF9F9;
 }
 
 // Отступы
 
-.q-pb-200 {
-    padding-bottom: 200px !important;
+.q-pb-540 {
+    padding-bottom: 540px !important;
 }
 .q-pl-150 {
     padding-left: 150px;
@@ -25,6 +26,9 @@
 }
 .q-pl-none {
     padding-left: 0 !important;
+}
+.q-mb-40 {
+    margin-bottom: 40px;
 }
 
 // Обводка

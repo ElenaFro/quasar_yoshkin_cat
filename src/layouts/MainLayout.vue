@@ -1,23 +1,23 @@
 <template>
   <q-layout view="lhh Lpr lff">
     <q-header class="transparent-header q-pl-150 q-pr-150">
-      <q-toolbar class="q-pl-none">
+      <q-toolbar class="q-pl-none q-pr-none">
         <q-toolbar-title >
-          <q-item class="q-pl-none" to="/" exact clickable v-ripple style="width: 240px;" >
+          <q-item class="q-pl-none q-pr-none" to="/" exact clickable v-ripple style="width: 240px;" >
           <img src='src/assets/котик.svg' alt="Logo" style="height: 40px;"/>
           Йошкин кот
           </q-item>
         </q-toolbar-title>
 
         <q-tabs v-if="$q.screen.gt.sm" class="absolute-top buttons">
-          <q-btn outline rounded color="primary" class="border-2-red" to="/about" exact>
+          <q-btn outline rounded color="primary" size="19px" class="border-2-red" to="/about" exact>
             <div class="dark text-capitalize">О нас</div>
           </q-btn>
-          <q-btn outline rounded color="primary" to="/routes" exact class="q-mlr-40 border-2-red">
+          <q-btn outline rounded color="primary" to="/routes" exact size="19px" class="q-mlr-40 border-2-red">
           <!-- <q-btn outline rounded color="primary" to="/routes" exact  @click="triggerInfo" class="q-mlr-40 border-2-red"> -->
             <div class="dark text-capitalize">Исторический</div>
           </q-btn>
-          <q-btn outline rounded color="primary" class="border-2-red" to="/reviews" exact>
+          <q-btn outline rounded color="primary" size="19px" class="border-2-red" to="/reviews" exact>
             <div class="dark text-capitalize">Современный</div>
           </q-btn>
         </q-tabs>
@@ -65,18 +65,56 @@
       </q-list>
     </q-drawer>
     
-    <q-page-container class="no-padding q-pb-200">
+    <q-page-container class="no-padding q-pb-540">
       <router-view />
     </q-page-container>
 
-    <q-footer class="bg-grey-8 text-white">
-      <q-toolbar>
+    <q-footer class="bg-secondary text-dark q-mb-40 q-pr-150 q-pl-150 q-pt-40" style="height: 461px;">
+      <q-toolbar  class="q-pl-none q-pr-none">
         <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+          <q-avatar size="100px" class="q-pt-40">
+            <q-item class="q-pl-none q-pt-xl" to="/" exact clickable v-ripple >
+            <img src='src/assets/котик.svg' alt="Logo"  style="height: 80px;"/>
+            </q-item>
           </q-avatar>
-          <div>Title</div>
+          <div>Йошкин кот</div>
+            <q-list class="q-pl-none">
+              <q-item href="/"  text-color="dark" class="q-mt-md q-mb-md q-pl-none">
+                Пользовательское соглашение
+              </q-item>
+              <q-item href="/"  text-color="dark" class="q-mt-md q-mb-md q-pl-none">
+                Политика о персональных данных
+              </q-item>
+            </q-list>
         </q-toolbar-title>
+        <div class="q-mt-md q-pl-none">
+        <q-list class="vertical q-pl-none">
+          <q-item text-color="dark" class="items-center q-pl-none" >
+            <q-btn text-color="dark" class="q-pl-none" flat  icon="mail"/>
+            <p class="q-mb-none q-pl-none">Email@mail.ru</p>
+          </q-item>
+          <q-item text-color="dark" class="items-center q-pl-none">
+            <q-btn text-color="dark" class="q-pl-none" flat icon="phone"/>
+            <p class="q-mb-none">tel. +7(333)333 33 33</p>
+          </q-item>
+          <q-item text-color="dark" class="items-center q-pl-none">
+            <q-btn text-color="dark" class="q-pl-none" flat icon="room"/>
+            <p class="q-mb-none">Республика Марий Эл, г.Йошкар-Ола, с.Семеновка, ул.Советская д.6 Семеновская школа-интернат</p>
+          </q-item>
+        </q-list>
+        <q-list>
+          <q-btn flat text-color="dark"  class="q-pl-none">
+            <a href="https://vk.com/club176111" text-color="dark" class="text-dark q-mt-md q-mb-md">
+              <img src='src/assets/VK.svg' alt="Logovk"  style="height: 20px;"/>
+            </a>
+          </q-btn>
+          <q-btn flat text-color="dark" >
+            <a href="https://youtube "  text-color="dark" class="text-dark q-mt-md q-mb-md">
+              <img src='src/assets/YouTube.svg' alt="Logoyoutube"  style="height: 20px;"/>
+            </a>
+          </q-btn>
+         </q-list>
+      </div>
       </q-toolbar>
     </q-footer>
   </q-layout>

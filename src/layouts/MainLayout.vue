@@ -9,7 +9,7 @@
           </q-item> -->
           <!-- <q-avatar size="80px" class="q-pt-lg"> -->
             <q-item class="q-pl-none q-pr-none q-pt-none text-dark" to="/" exact clickable v-ripple  style="width: 100px;">
-              <img src='src/assets/котик.svg' alt="Logo" style="height: 80px;" />
+              <img src='src/assets/котик.png' alt="Logo" style="height: 80px;" />
             </q-item>
           <!-- </q-avatar> -->
         </q-toolbar-title>
@@ -62,7 +62,7 @@
         <q-toolbar-title>
           <!-- <q-avatar size="100px" class="q-pt-40"> -->
             <q-item class="q-pl-none q-pt-xl" to="/" exact clickable v-ripple  style="width: 100px;">
-              <img src='src/assets/котик.svg' alt="Logo" style="height: 80px;" />
+              <img src='src/assets/котик.png' alt="Logo" style="height: 80px;" />
             </q-item>
           <!-- </q-avatar> -->
           <div>Йошкин кот</div>
@@ -71,22 +71,22 @@
               Пользовательское соглашение
             </q-item>
             <q-item href="" text-color="dark" class="q-mt-md q-mb-md q-pl-none">
-              Политика о персональных данных
+              Политика обработки персональных данных
             </q-item>
           </q-list>
         </q-toolbar-title>
         <div class="q-mt-md q-pl-none">
           <q-list class="vertical q-pl-none">
             <q-item text-color="dark" class="items-center q-pl-none">
-              <q-btn text-color="dark" class="q-pl-none" flat icon="mail" />
-              <p class="q-mb-none q-pl-none">Email@mail.ru</p>
-            </q-item>
-            <q-item text-color="dark" class="items-center q-pl-none">
-              <q-btn text-color="dark" class="q-pl-none" flat icon="phone" />
+              <q-btn size="20px" text-color="dark" class="q-pl-none" flat icon="phone" />
               <p class="q-mb-none">tel. +7(333)333 33 33</p>
             </q-item>
             <q-item text-color="dark" class="items-center q-pl-none">
-              <q-btn text-color="dark" class="q-pl-none" flat icon="room" />
+              <q-btn size="20px" text-color="dark" class="q-pl-none" flat icon="mail" />
+              <p class="q-mb-none q-pl-none">Email@mail.ru</p>
+            </q-item>
+            <q-item text-color="dark" class="items-center q-pl-none">
+              <q-btn size="20px" text-color="dark" class="q-pl-none" flat icon="room" />
               <p class="q-mb-none">Республика Марий Эл, г.Йошкар-Ола, с.Семеновка, ул.Советская д.6 Семеновская
                 школа-интернат</p>
             </q-item>
@@ -94,12 +94,12 @@
           <q-list>
             <q-btn flat text-color="dark" class="q-pl-none">
               <a href="https://vk.com/club176111" text-color="dark" class="text-dark q-mt-md q-mb-md">
-                <img src='src/assets/VK.svg' alt="Logovk" style="height: 20px;" />
+                <img src='src/assets/VK.svg' alt="Logovk" style="height: 40px;" />
               </a>
             </q-btn>
             <q-btn flat text-color="dark">
               <a href="https://youtube " text-color="dark" class="text-dark q-mt-md q-mb-md">
-                <img src='src/assets/YouTube.svg' alt="Logoyoutube" style="height: 20px;" />
+                <img src='src/assets/YouTube.svg' alt="Logoyoutube" style="height: 40px;" />
               </a>
             </q-btn>
           </q-list>

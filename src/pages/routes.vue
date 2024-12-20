@@ -1,18 +1,12 @@
 <template>
   <q-page>
-    <div class="padding-top-sto q-pl-150">
+    <!-- <div class="padding-top-sto q-pl-150">
       <q-breadcrumbs>
         <q-breadcrumbs-el label="Главная"  to="/"/>
         <q-breadcrumbs-el label="Маршрут исторический" />
       </q-breadcrumbs>
-    </div>
-    <div class='q-mt-lg q-pl-150 '>
-      <h3>Маршрут исторический</h3>
-      <p>Информация о маршруте</p>
-      <p>Выберите интересное место на карте</p>
-    </div>  
+    </div> -->
     <canvas class='q-ma-lg' ref="mapCanvas" width="1920" height="867"></canvas>
-    
   </q-page>
 </template>
 
@@ -33,7 +27,7 @@ catImage.src = catImageSrc; // Устанавливаем путь к изобр
 
 // Функция для рисования кота
 function drawCat() {
-  ctx.value.drawImage(catImage, catX - 35, catY - 60, 100, 100);
+  ctx.value.drawImage(catImage, catX - 45, catY - 100, 150, 150);
 }
 
 // Функция для обновления карты

@@ -7,6 +7,7 @@ vue
 
           <h2>О нас</h2>
           <p class="text-body1"> Информация о проекте</p>
+          <q-img src='src/assets/котик.png'></q-img>
         </div>
       </div>
     </q-img>
